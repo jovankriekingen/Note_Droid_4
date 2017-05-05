@@ -1,9 +1,11 @@
 package jo.vk.notedroid4.fragments;
 
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import android.support.v4.preference.PreferenceFragment;
 
 import jo.vk.notedroid4.R;
+
+//import android.preference.PreferenceFragment;
 
 public class SettingsFragment extends PreferenceFragment {
 

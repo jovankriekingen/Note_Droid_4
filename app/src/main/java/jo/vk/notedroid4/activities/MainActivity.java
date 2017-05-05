@@ -1,6 +1,7 @@
 package jo.vk.notedroid4.activities;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -15,18 +16,18 @@ import android.widget.TextView;
 import jo.vk.notedroid4.R;
 import jo.vk.notedroid4.fragments.AboutFragment;
 import jo.vk.notedroid4.fragments.NotesFragment;
+import jo.vk.notedroid4.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    private DrawerLayout drawer;
-    private AboutFragment aboutFragment;
-    private Fragment settingsFragment;
-    private NotesFragment notesFragment;
-
     //no magic values
     private static final String BACKSTACK_NAME = "main_stack";
+    private DrawerLayout drawer;
+    private AboutFragment aboutFragment;
+    private SettingsFragment settingsFragment;
+    private NotesFragment notesFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity
         username.setText("Jo");
 
         aboutFragment = new AboutFragment();
-        settingsFragment = new Fragment();
+        settingsFragment = new SettingsFragment();
         notesFragment = new NotesFragment();
 
         replaceFragment(notesFragment);
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @NonNull
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
