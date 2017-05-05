@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Note Droid 4</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="mi_search">Search</string>
+
+    <string name="txt_about">This is the about screen of the awesome note application. I could style this better but my design skills are a bit rusty</string>
+
+</resources>
