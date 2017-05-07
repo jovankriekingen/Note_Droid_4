@@ -24,12 +24,7 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
-    // compile 'com.android.support:appcompat-v4:25.3.1'
-   // compile 'com.android.support:design-v4-25.3.1'
-   // compile 'com.android.support:support-v4-preferencefragment'
-    testCompile 'junit:junit:4.12'
     testCompile 'junit:junit:4.12'
     compile('com.android.support:support-v4-preferencefragment:1.+@aar') {
-
     }
 }
