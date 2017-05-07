@@ -13,25 +13,28 @@ import android.database.sqlite.SQLiteOpenHelper;
 //has methods to get reference, create the db or update
 public final class DBHelper extends SQLiteOpenHelper {
 
+    //constructor
     public DBHelper(Context context) {
         super(context, DBContract.DB_NAME, null, 1);
     }
 
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(SQLiteDatabase mDatabase) {
 
         String createStatement = "CREATE table " + DBContract.TABLE_NOTES + " ( "
                 + DBContract._ID + " Integer primary key autoincrement, "
                 + DBContract.NOTES_TITLE + " text not null, "
                 + DBContract.NOTES_DESCRIPTION + " text not null "
+                + DBContract.NOTE_LASTMODIFIEDDATE + " text not null "
+                + DBContract.NOTE_PUBLISHDATE + " text not null "
                 + ")";
 
-        db.execSQL(createStatement);
+        mDatabase.execSQL(createStatement);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase mDatabase, int oldVersion, int newVersion) {
 
     }
 }
